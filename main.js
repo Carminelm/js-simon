@@ -1,5 +1,6 @@
 const stampa = document.getElementById("NumeriStampa")
-
+const stampasecondi = document.getElementById("secondi")
+let timer;
 //Visualizzare in pagina 5 numeri casuali.
 
 function generaNumeriCasuali() {
@@ -14,3 +15,24 @@ function generaNumeriCasuali() {
   
 
 //Da lì parte un timer di 30 secondi.
+
+function StartTimer (){
+    let secondi=30; 
+   timer = setInterval (function(){
+        secondi--;
+        //output
+        stampasecondi.innerText=secondi;
+    },1000)
+
+    if (secondi <= 0){
+
+        clearInterval(timer);
+
+
+    }
+
+}
+let timerstop = StartTimer();
+
+
+
