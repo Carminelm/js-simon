@@ -22,14 +22,14 @@ function StartTimer (){
         secondi--;
         //output
         stampasecondi.innerText=secondi;
+        if (secondi === 0){
+            clearInterval(timer);
+            stampa.classList.add("display")
+            stampasecondi.classList.add("display")
+    
+    
+        }
     },1000)
-
-    if (secondi <= 0){
-
-        clearInterval(timer);
-
-
-    }
 
 }
 let timerstop = StartTimer();
